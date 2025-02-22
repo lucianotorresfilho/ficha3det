@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const pontosInput = document.getElementById("pontos");
     const nivelSpan = document.getElementById("nivel");
 
+    const form = document.getElementById("fichaForm");
+
     // Função para calcular e atualizar os campos de Ação, Mana, Vida e Pontos
     function calcularCampos() {
         const poder = parseFloat(poderInput.value) || 0;
@@ -51,6 +53,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Adiciona evento de input para o campo de Pontos
     pontosInput.addEventListener("input", atualizarNivel);
+
+    // Adiciona um evento de submit ao formulário
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        // Captura os dados do formulário
+        const nome = document.getElementById("nome").value;
+        const arquétipo = document.getElementById("arquétipo").value;
+        const escala = document.getElementById("tamanho").value;
+        const pontos = document.getElementById("pontos").value;
+        const experiencia = document.getElementById("experiencia").value;
+
+        // Cria um objeto com os dados da ficha
+        const ficha = {
+            nome,
+            arquétipo,
+            escala,
+            pontos,
+            experiencia,
+        };
+
+        // Adiciona a ficha à tabela
+        adicionarFicha(ficha);
+
+        // Limpa o formulário após salvar
+        limparFormulario();
+    });
 
     // Registrar o Service Worker
     if ("serviceWorker" in navigator) {
