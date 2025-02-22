@@ -1,9 +1,217 @@
-Seu nome
-@seunome
-Editar
-Projetos
-27
-Estrelas
-302
-Seguidores
-83
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha 3DeT</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Manifesto do PWA -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Cor do tema -->
+    <meta name="theme-color" content="#28a745">
+</head>
+<body>
+    <div class="container">
+        <h1>Ficha 3DeT</h1>
+        <form id="fichaForm">
+            <!-- Linha para Nome e Pontos -->
+            <div class="nome-pontos-container">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="pontos">Pontos:</label>
+                    <input type="number" id="pontos" name="pontos">
+                    <span id="nivel" class="nivel-texto">INICIANTE</span>
+                </div>
+            </div>
+
+            <!-- Linha para Arquétipo, Experiência e Tamanho -->
+            <div class="arquetipo-experiencia-tamanho-container">
+                <div class="form-group">
+                    <label for="arquétipo">Arquétipo:</label>
+                    <input type="text" id="arquétipo" name="arquétipo">
+                </div>
+
+                <div class="form-group">
+                    <label for="experiencia">XP:</label>
+                    <input type="number" id="experiencia" name="experiencia">
+                </div>
+
+                <div class="form-group">
+                    <label for="tamanho">Tamanho:</label>
+                    <input type="text" id="tamanho" name="tamanho">
+                </div>
+            </div>
+
+            <!-- Campo Conceito -->
+            <div class="form-group">
+                <label for="conceito">Conceito:</label>
+                <textarea id="conceito" name="conceito" rows="4"></textarea>
+            </div>
+
+            <!-- Campos de múltipla escolha -->
+            <div class="multipla-escolha-container">
+                <div class="form-group">
+                    <label>PERÍCIAS:</label>
+                    <div class="checkbox-group">
+                        <!-- Checkboxes e labels na mesma linha -->
+                        <div>
+                            <input type="checkbox" id="animais" name="habilidades" value="animais">
+                            <label for="animais">Animais</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="arte" name="habilidades" value="arte">
+                            <label for="arte">Arte</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="esporte" name="habilidades" value="esporte">
+                            <label for="esporte">Esporte</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="influencia" name="habilidades" value="influencia">
+                            <label for="influencia">Influência</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="luta" name="habilidades" value="luta">
+                            <label for="luta">Luta</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="manha" name="habilidades" value="manha">
+                            <label for="manha">Manha</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="maquinas" name="habilidades" value="maquinas">
+                            <label for="maquinas">Máquinas</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="medicina" name="habilidades" value="medicina">
+                            <label for="medicina">Medicina</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="mistica" name="habilidades" value="mistica">
+                            <label for="mistica">Mística</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="percepcao" name="habilidades" value="percepcao">
+                            <label for="percepcao">Percepção</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="saber" name="habilidades" value="saber">
+                            <label for="saber">Saber</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="sobrevivencia" name="habilidades" value="sobrevivencia">
+                            <label for="sobrevivencia">Sobrevivência</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linha para Poder e Ação -->
+            <div class="grid-container">
+                <div class="form-group">
+                    <label for="poder">Poder:</label>
+                    <input type="number" id="poder" name="poder">
+                </div>
+
+                <div class="form-group">
+                    <label for="acao">Ação:</label>
+                    <input type="number" id="acao" name="acao" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="acaoAtual">Atual:</label>
+                    <input type="number" id="acaoAtual" name="acaoAtual">
+                </div>
+            </div>
+
+            <!-- Linha para Habilidade e Mana -->
+            <div class="grid-container">
+                <div class="form-group">
+                    <label for="habilidade">Habilidade:</label>
+                    <input type="number" id="habilidade" name="habilidade">
+                </div>
+
+                <div class="form-group">
+                    <label for="mana">Mana:</label>
+                    <input type="number" id="mana" name="mana" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="manaAtual">Atual:</label>
+                    <input type="number" id="manaAtual" name="manaAtual">
+                </div>
+            </div>
+
+            <!-- Linha para Resistência e Vida -->
+            <div class="grid-container">
+                <div class="form-group">
+                    <label for="resistencia">Resistência:</label>
+                    <input type="number" id="resistencia" name="resistencia">
+                </div>
+
+                <div class="form-group">
+                    <label for="vida">Vida:</label>
+                    <input type="number" id="vida" name="vida" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="vidaAtual">Atual:</label>
+                    <input type="number" id="vidaAtual" name="vidaAtual">
+                </div>
+            </div>
+
+            <!-- Outros campos do formulário (Vantagens, Desvantagens, etc.) -->
+            <div class="form-group">
+                <label for="vantagens">Vantagens:</label>
+                <textarea id="vantagens" name="vantagens" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="desvantagens">Desvantagens:</label>
+                <textarea id="desvantagens" name="desvantagens" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="tecnicas">Técnicas:</label>
+                <textarea id="tecnicas" name="tecnicas" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="inventario">Inventário:</label>
+                <textarea id="inventario" name="inventario" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Salvar</button>
+            <button type="button" onclick="limparFormulario()">Limpar</button>
+            <button type="button" onclick="salvarBackup()">Salvar Backup</button>
+            <button type="button" onclick="carregarBackup()">Carregar Backup</button>
+        </form>
+
+        <h2>Fichas Cadastradas</h2>
+        <table id="fichasTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Arquétipo</th>
+                    <th>Escala</th>
+                    <th>Pontos</th>
+                    <th>Experiência</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- As fichas serão inseridas aqui dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Input oculto para carregar o arquivo de backup -->
+    <input type="file" id="backupFile" style="display: none;" accept=".json" />
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+button[type="button"] {
+    background-color: #dc3545;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+}
+
+/* Grid para Nome e Pontos */
+.nome-pontos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 15px; /* Espaçamento entre os campos */
+    margin-bottom: 20px;
+}
+
+/* Grid para Arquétipo, Experiência e Tamanho */
+.arquetipo-experiencia-tamanho-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 15px; /* Espaçamento entre os campos */
+    margin-bottom: 20px;
+}
+
+/* Grid para Poder, Ação e Atual */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 15px; /* Espaçamento entre os itens */
+    margin-bottom: 20px;
+}
+
+/* Campos de múltipla escolha */
+.multipla-escolha-container {
+    margin-bottom: 20px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaçamento entre os checkboxes */
+}
+
+.checkbox-group div {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaçamento entre o checkbox e a label */
+}
+
+.nivel-texto {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 10px;
+    color: #333;
+}
